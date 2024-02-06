@@ -1,0 +1,126 @@
+/* Default styles */
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #009578;
+}
+
+.Expense-tracker {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; /* Set your desired maximum width for the table */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Add some margin for better spacing on larger screens */
+}
+
+.Expense-tracker * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Expense-tracker th, .Expense-tracker td {
+    padding: 15px 20px;
+}
+
+.Expense-tracker th {
+    border-bottom: 2px solid #009578;
+}
+
+.input, .delete-entry {
+    height: 40px;
+    font-size: 16px;
+
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    width: 100%;
+
+
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #009578;
+}
+
+.delete-entry {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    color: #ff0000;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-entry:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.controls,
+.summary {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media query for small screens */
+
+/* Media query for small screens */
+
+@media only screen and (max-width: 767px) {
+    .Expense-tracker th,
+    .Expense-tracker td {
+        padding: 10px;
+        word-break: break-word; /* Break words if necessary */
+    }
+
+    .Expense-tracker {
+        width: 90%; /* Set width to 90% of the viewport width */
+        margin: 20px auto; /* Center the table horizontally */
+        overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    }
+
+    .Expense-tracker thead,
+    .Expense-tracker tbody,
+    .Expense-tracker tr,
+    .Expense-tracker th,
+    .Expense-tracker td {
+        display: block; /* Change table elements to block for stacking */
+    }
+
+    .Expense-tracker tr {
+        border-bottom: 1px solid #ddd; /* Add borders between rows */
+        margin-bottom: 10px; /* Add spacing between rows */
+    }
+
+    .Expense-tracker th {
+        text-align: left; /* Align header text to the left */
+    }
+}
+
+
